@@ -91,14 +91,14 @@ function refreshData(){
     var balanceElem = document.getElementById('contract-balance');
     var baseNum = 0;
     contractBalance(function(result){
-        rawStr = numberWithCommas(Number(result).toFixed(3));
-        balanceElem.textContent = stripDecimals(rawStr, 3) + ' Safemmoon';
+        rawStr = numberWithCommas(Number(result).toFixed(7));
+        balanceElem.textContent = stripDecimals(rawStr, 7) + ' Safemmoon';
     });
 
     var userBalanceElem = document.getElementById('user-balance');
     userBalance(function(result){
-        rawStr = numberWithCommas(Number(result).toFixed(3));
-        userBalanceElem.textContent = stripDecimals(rawStr, 3) + ' Safemoon';
+        rawStr = numberWithCommas(Number(result).toFixed(7));
+        userBalanceElem.textContent = stripDecimals(rawStr, 7) + ' Safemoon';
     });
 
     lastHatch(currentAddr,function(lh){
