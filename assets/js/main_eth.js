@@ -97,8 +97,8 @@ function refreshData(){
 
     var userBalanceElem = document.getElementById('user-balance');
     userBalance(function(result){
-        rawStr = numberWithCommas(Number(result).toFixed(7));
-        userBalanceElem.textContent = stripDecimals(rawStr, 7) + ' Safemoon';
+        rawStr = Number(result);
+        userBalanceElem.textContent = rawStr + ' Safemoon';
     });
 
     lastHatch(currentAddr,function(lh){
