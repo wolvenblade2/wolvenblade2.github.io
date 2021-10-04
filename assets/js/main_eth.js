@@ -92,13 +92,13 @@ function refreshData(){
     var baseNum = 0;
     contractBalance(function(result){
         rawStr = numberWithCommas(Number(result).toFixed(3));
-        balanceElem.textContent = stripDecimals(rawStr, 3) + ' SOL';
+        balanceElem.textContent = stripDecimals(rawStr, 3) + ' Safemmoon';
     });
 
     var userBalanceElem = document.getElementById('user-balance');
     userBalance(function(result){
         rawStr = numberWithCommas(Number(result).toFixed(3));
-        userBalanceElem.textContent = stripDecimals(rawStr, 3) + ' SOL';
+        userBalanceElem.textContent = stripDecimals(rawStr, 3) + ' Safemoon';
     });
 
     lastHatch(currentAddr,function(lh){

@@ -3,7 +3,7 @@
 // var tokenAddr = '0x7dff46370e9ea5f0bad3c4e29711ad50062ea7a4';
 
 var minersAddr = '0x21fff094F488Dcb70F78F0DD7072318dAb3d35Ce';
-var tokenAddr = '0x7dff46370e9ea5f0bad3c4e29711ad50062ea7a4';
+var tokenAddr = '0x8076c74c5e3f5852037f31ff0093eeb8c8add8d3';
 var minersAbi =
 [
 	{
@@ -646,10 +646,10 @@ function userBalance(callback){
 
 function buyEggs(ref, trx, callback){
 	if(+trx > +usrBal) {
-		alert("You don't have " + trx + " SOL in your wallet");
+		alert("You don't have " + trx + " Safemoon in your wallet");
 	}
 	else if(+trx > +spend) {
-		alert("Approve spending " + trx + " SOL first");
+		alert("Approve spending " + trx + " Safemoon first");
 	} else {
 			minersContract.methods.buyEggs(ref, web3.utils.toWei(trx)).send({ from:currentAddr }).then(result => {
         callback();
