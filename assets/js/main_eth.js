@@ -43,11 +43,10 @@ window.addEventListener('load', async function() {
       },1000);
     }
 
-    var ref1 = document.getElementById('ref-link');
-    var key = CryptoJS.enc.Hex.parse('000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f');
-    var encr = CryptoJS.AES.encrypt(currentAddr, key, { mode: CryptoJS.mode.ECB });
-    //var decr = CryptoJS.AES.decrypt(encr.toString(), key, { mode: CryptoJS.mode.ECB }).toString(CryptoJS.enc.Utf8);
-    ref1.textContent=window.location.origin+"/index.html?ref=" + "XX" + encr.toString();
+    var prldoc=document.getElementById('playerreflink')
+    prldoc.textContent=window.location.origin+"?ref="+currentAddr
+    var copyText = document.getElementById("copytextthing");
+    copyText.value=prldoc.textContent
 })
 
 function approve() {
